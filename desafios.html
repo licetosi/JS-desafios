@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+
+<body>
+    <!-- <script> -->
+
+
+    <!-- // EXERCÍCIO 1: Lista de Compras
+
+        // Maria está indo ao supermercado. Ela tem uma lista de itens para comprar. Ajude Maria a criar
+        // um programa que permita que ela adicione cada item à sua lista de compras. No final, exiba a
+        // lista completa de compras.
+
+        // //armazena os itens da lista
+        // let lista = [];
+        // //adicionar novo item
+        // function adicionarItem() {
+        //     let novoItem = prompt("Digite o nome da nova compra:");
+        //     lista.push(novoItem);
+        //     alert("Item adicionado à sua lista: " + novoItem);
+        // }
+
+        // // Função para exibir a lista de itens
+        // function exibirEstoque() {
+        //     if (lista.length === 0) {
+        //         alert("A lista está vazia.");
+        //         return;
+        //     }
+
+        //     let listaItens = "Itens na lista:\n";
+        //     lista.forEach(function (item, index) {
+        //         listaItens += index + ": " + item + "\n";
+        //     });
+
+        //     alert(listaItens);
+        // }
+
+        // // Loop para executar o programa até que o usuário decida sair
+        // while (true) {
+        //     let opcao = prompt("Maria, escolha uma opção:\n1. Adicionar item\n2. Ver a lista");
+
+        //     switch (opcao) {
+        //         case "1":
+        //             adicionarItem();
+        //             break;
+
+        //         case "2":
+        //             exibirEstoque();
+        //             break;
+
+        //         default:
+        //             alert("Opção inválida.");
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     //     EXERCÍCIO 2 -->
+
+    <!-- // Carlos está organizando sua agenda semanal. Ele quer criar um programa para adicionar os
+        // eventos que ele precisa participar em cada dia da semana. Ajude Carlos a criar um calendário
+        // de eventos usando arrays para cada dia da semana e exiba os eventos planejados. -->
+
+    <!-- // let planejamento = {
+        //     domingo: [],
+        //     segunda: [],
+        //     terça: [],
+        //     quarta: [],
+        //     quinta: [],
+        //     sexta: [],
+        //     sábado: []
+        // };
+
+        // // Define um array com os nomes dos dias da semana em ordem
+        // let week = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"];
+
+        // // Loop que continuará indefinidamente até que o usuário decida sair
+        // while (true) {
+        //     // Solicita ao usuário que escolha uma opção
+        //     let opcao = prompt("Escolha uma opção:\n1. Adicionar evento;\n2. Ver eventos por dia;\n3. Ver todos os compromissos;\n4. Sair");
+
+        //     // Estrutura de decisão baseada na opção escolhida pelo usuário
+        //     switch (opcao) {
+        //         case "1":
+        //             // Solicita ao usuário que escolha o dia para adicionar um evento
+        //             let diaEscolhido = prompt("Escolha o dia que você deseja planejar:\n1. Domingo;\n2. Segunda-feira;\n3. Terça-feira;\n4. Quarta-feira;\n5. Quinta-feira;\n6. Sexta-feira;\n7. Sábado;");
+        //             // Solicita ao usuário que digite um evento para o dia escolhido
+        //             let compromisso = prompt(`Digite um evento para ${week[parseInt(diaEscolhido) - 1]}:`);
+        //             // Adiciona o evento ao array correspondente no objeto de planejamento
+        //             planejamento[week[parseInt(diaEscolhido) - 1]].push(compromisso);
+        //             // Mostra um alerta confirmando a adição do evento
+        //             alert(`Você adicionou '${compromisso}' para ${week[parseInt(diaEscolhido) - 1]}`);
+        //             break;
+        //         case "2":
+        //             // Solicita ao usuário que escolha o dia para ver os eventos
+        //             let diaMostrar = prompt("Escolha o dia que você deseja ver:\n1. Domingo;\n2. Segunda-feira;\n3. Terça-feira;\n4. Quarta-feira;\n5. Quinta-feira;\n6. Sexta-feira;\n7. Sábado;");
+        //             // Obtém os eventos para o dia escolhido
+        //             let eventosDia = planejamento[week[parseInt(diaMostrar) - 1]];
+        //             // Cria uma mensagem a ser exibida de acordo com os eventos do dia
+        //             let mensagemDia = eventosDia.length > 0 ? `Eventos em ${week[parseInt(diaMostrar) - 1]}: ${eventosDia.join(", ")}` : `Nenhum evento registrado em ${week[parseInt(diaMostrar) - 1]}.`;
+        //             // Mostra um alerta com os eventos do dia escolhido
+        //             alert(mensagemDia);
+        //             break;
+        //         case "3":
+        //             // Inicializa uma string para armazenar todos os compromissos
+        //             let todosCompromissos = "";
+        //             // Percorre os dias da semana no objeto de planejamento
+        //             for (let dia in planejamento) {
+        //                 // Verifica se há compromissos para o dia atual
+        //                 if (planejamento[dia].length > 0) {
+        //                     // Adiciona os compromissos do dia à string de todos os compromissos
+        //                     todosCompromissos += `${week.indexOf(dia) + 1}. ${dia}: ${planejamento[dia].join(", ")}\n`;
+        //                 }
+        //             }
+        //             // Mostra um alerta com todos os compromissos por dia
+        //             if (todosCompromissos !== "") {
+        //                 alert("Compromissos em cada dia:\n" + todosCompromissos);
+        //             } else {
+        //                 alert("Nenhum compromisso registrado.");
+        //             }
+        //             break;
+        //         case "4":
+        //             // Encerra o loop e encerra o planejamento
+        //             alert("Encerrando o planejamento.");
+        //             break;
+        //         default:
+        //             // Mostra um alerta se o usuário escolher uma opção inválida
+        //             alert("Opção inválida.");
+        //     }
+
+        //     // Verifica se o usuário escolheu sair (opção 4)
+        //     if (opcao === "4") {
+        //         break;
+        //     }
+        // }
+    
+
+
+
+
+//         EXERCÍCIO 3: Coleção de Livros -->
+
+    <!-- // Ana ama ler e está construindo sua coleção de livros. Crie um programa para Ana registrar os
+// títulos dos livros que ela possui. No final, exiba a lista completa de livros. -->
+
+
+    <!-- <h1>Livros da Ana</h1>
+
+    <label for="item">Novo Livro:</label>
+    <input type="text" id="item">
+    <button onclick="adicionarItem()">Adicionar</button>
+
+
+
+    <button onclick="mostrarEstoque()">Mostrar Lista de Livro</button>
+
+    <div id="output"></div>
+
+    <script>
+        let estoque = [];
+        let outputDiv = document.getElementById("output");
+
+        function adicionarItem() {
+            let novoItem = document.getElementById("item").value;
+            estoque.push(novoItem);
+            outputDiv.innerHTML = "Livro adicionado a Lista: " + novoItem;
+        }
+
+        function removerItem() {
+            let itemRemover = document.getElementById("itemRemover").value;
+            let index = estoque.indexOf(itemRemover);
+
+            if (index !== -1) {
+                estoque.splice(index, 1);
+                outputDiv.innerHTML = "Livro removido da Lista: " + itemRemover;
+            } else {
+                outputDiv.innerHTML = "Livro não encontrado na lista.";
+            }
+        }
+
+        function mostrarEstoque() {
+            if (estoque.length === 0) {
+                outputDiv.innerHTML = "A lista está vazia.";
+            } else {
+                let listaItens = "Livros na Lista:<br>";
+                for (let i = 0; i < estoque.length; i++) {
+                    listaItens += (i + 1) + ". " + estoque[i] + "<br>";
+                }
+                outputDiv.innerHTML = listaItens;
+            }
+        }
+    </script> -->
+
+
+
+
+
+
+
+
+    <!-- EXERCÍCIO 4: Jogo de Cartas
+    Pedro e seus amigos estão jogando um jogo de cartas. Crie um programa que represente as
+    cartas de um baralho usando arrays. Em seguida, distribua 5 cartas aleatórias para cada
+    jogador e exiba as mãos de todos. -->
+
+    <!-- <script>
+
+    // Definindo os naipes e valores das cartas
+    const naipes = ['Espadas', 'Copas', 'Ouros', 'Paus'];
+    const valores = ['Ás', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valete', 'Dama', 'Rei'];
+    
+    // Criando um baralho com todas as combinações de naipes e valores
+    const baralho = [];
+    for (const valor of valores) {
+        for (const naipe of naipes) {
+            baralho.push({ valor, naipe });
+        }
+    }
+    
+    // Função para embaralhar um array usando o algoritmo Fisher-Yates
+    function embaralhar(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    
+    // Função para distribuir cartas para os jogadores
+    function distribuirCartas(baralho, numCartas) {
+        return baralho.splice(0, numCartas);
+    }
+    
+    // Número de jogadores
+    const numJogadores = 4;
+    
+    // Embaralhando o baralho
+    embaralhar(baralho);
+    
+    // Distribuindo 5 cartas para cada jogador
+    const maos = [];
+    for (let i = 0; i < numJogadores; i++) {
+        maos.push(distribuirCartas(baralho, 5));
+    }
+    
+    // Construindo as mensagens das mãos dos jogadores
+    let mensagem = '';
+    for (let i = 0; i < maos.length; i++) {
+        mensagem += `Mão do Jogador ${i + 1}:\n`;
+        for (const carta of maos[i]) {
+            mensagem += `${carta.valor} de ${carta.naipe}\n`;
+        }
+        mensagem += '\n';
+    }
+    
+    // Exibindo as mãos dos jogadores usando alert
+    alert(mensagem);
+    
+    // Ajuda do java SCRIPT
+
+
+</script> -->
+
+
+
+
+    <!-- 
+    EXERCÍCIO 5:
+    João está com muitas tarefas para fazer durante o dia. Crie um programa que permita que
+    João adicione suas tarefas a uma lista. Ao final do dia, exiba todas as tarefas que ele precisa
+    realizar. -->
+
+    <!-- <h1>Lista de afazeres do João</h1>
+
+    <label for="item">Nova atividade:</label>
+    <input type="text" id="item">
+    <button onclick="adicionarItem()">Adicionar</button>
+
+
+
+    <button onclick="mostrarListadafazeres()">Mostrar Lista de Afazeres</button>
+
+    <div id="output"></div> -->
+
+    <!-- <script>
+        let listadafazeres = [];
+        let outputDiv = document.getElementById("output");
+
+        function adicionarItem() {
+            let novoItem = document.getElementById("item").value;
+            listadafazeres.push(novoItem);
+            outputDiv.innerHTML = "Item adicionado à Lista: " + novoItem;
+        }
+
+        function removerItem() {
+            let itemRemover = document.getElementById("itemRemover").value;
+            let index = listadafazeres.indexOf(itemRemover);
+
+            if (index !== -1) {
+                listadafazeres.splice(index, 1);
+                outputDiv.innerHTML = "Item removido da Lista: " + itemRemover;
+            } else {
+                outputDiv.innerHTML = "Item não encontrado na lista.";
+            }
+        }
+
+        function mostrarListadafazeres() {
+            if (listadafazeres.length === 0) {
+                outputDiv.innerHTML = "A lista está vazia.";
+            } else {
+                let listaItens = "Itens da Lista:<br>";
+                for (let i = 0; i < listadafazeres.length; i++) {
+                    listaItens += (i + 1) + ". " + listadafazeres[i] + "<br>";
+                }
+                outputDiv.innerHTML = listaItens;
+            }
+        }
+    </script> -->
+
+
+
+
+
+
+    <!-- EXERCÍCIO 6: Controle de Gastos
+    Fernanda quer controlar seus gastos mensais. Crie um programa que permita que ela insira
+    seus gastos diários em um array. No final do mês, exiba a soma total dos gastos. -->
+
+    <!-- <h1>Controle de Gastos Mensais</h1>
+
+    <div>
+        <label for="gasto">Insira o gasto do dia:</label>
+        <input type="number" id="gasto" step="0.01">
+        <button onclick="adicionarGasto()">Adicionar Gasto</button>
+    </div>
+
+    <div>
+        <h2>Gastos Diários:</h2>
+        <ul id="listaGastos"></ul>
+    </div>
+
+    <div>
+        <h2>Total de Gastos no Mês:</h2>
+        <p id="totalGastos">R$ 0.00</p>
+    </div>
+
+    <script>
+        const gastosDiarios = [];
+
+        function adicionarGasto() {
+            const gastoInput = document.getElementById("gasto");
+            const valorGasto = parseFloat(gastoInput.value);
+
+            if (!isNaN(valorGasto)) {
+                gastosDiarios.push(valorGasto);
+                gastoInput.value = "";
+                exibirGastos();
+                calcularTotal();
+            }
+        }
+
+        function exibirGastos() {
+            const listaGastos = document.getElementById("listaGastos");
+            listaGastos.innerHTML = "";
+
+            gastosDiarios.forEach((gasto, index) => {
+                const itemLista = document.createElement("li");
+                itemLista.textContent = `Dia ${index + 1}: R$ ${gasto.toFixed(2)}`;
+                listaGastos.appendChild(itemLista);
+            });
+        }
+
+        function calcularTotal() {
+            const totalGastos = document.getElementById("totalGastos");
+            const somaTotal = gastosDiarios.reduce((total, gasto) => total + gasto, 0);
+            totalGastos.textContent = `Total de Gastos no Mês: R$ ${somaTotal.toFixed(2)}`;
+        }
+
+    </script>
+ -->
+
+
+    <!-- EXERCÍCIO 7: Ranking de Pontuações
+ Lucas e seus amigos estão jogando videogame e querem manter um ranking de pontuações.
+ Crie um programa que permita que eles adicionem suas pontuações em um array. No final do
+ dia, exiba o ranking com as pontuações ordenadas de forma decrescente. -->
+
+
+    <!-- <script>
+        function ordenarDecrescente(array) {
+            return array.sort((a, b) => b - a);
+        }
+
+        // Função principal
+        function ABCD() {
+            const pontuacoes = [];
+            // Array para armazenar as pontuações
+
+            const numJogadores = parseInt(prompt("Quantos jogadores têm pontuações para adicionar?"));
+
+            for (let i = 0; i < numJogadores; i++) {
+                const pontuacao = parseInt(prompt(`Digite a pontuação do jogador ${i + 1}:`));
+                pontuacoes.push(pontuacao);
+            }
+
+            // Ordena as pontuações em ordem decrescente
+            ordenarDecrescente(pontuacoes);
+
+            // Exibe o ranking de pontuações
+            alert("\nRanking de Pontuações:");
+            for (let i = 0; i < pontuacoes.length; i++) {
+                alert(`Posição ${i + 1}: Pontuação ${pontuacoes[i]}`);
+            }
+        }
+
+        // Chama a função principal
+        ABCD();
+    </script> -->
+
+
+
+
+    <!-- EXECÍCIO 8: Previsão do Tempo
+
+ Marina é uma entusiasta do clima. Crie um programa que represente a temperatura de cada
+ dia da semana usando um array. Em seguida, exiba a previsão semanal de temperatura para
+ que Marina possa se preparar. -->
+
+    <!-- <script>
+ let diasSemana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"];
+ 
+ // Array de temperaturas
+ let temperaturas = [];
+ 
+ // Preencher as temperaturas para cada dia da semana
+
+ for (let i = 0; i < diasSemana.length; i++) {
+     let temperatura = parseFloat(prompt(`Digite a temperatura para ${diasSemana[i]}: `));
+     temperaturas.push(temperatura);
+ }
+ 
+ // Exibir a previsão semanal de temperatura
+
+ alert("\nPrevisão Semanal de Temperatura:");
+ for (let i = 0; i < diasSemana.length; i++) {
+     alert(`${diasSemana[i]}: ${temperaturas[i]}°C`);
+ }
+
+
+</script> -->
+
+
+
+
+
+    <!-- EXERCÍCIO 9: Cadastro de Alunos
+ Uma escola deseja cadastrar seus alunos. Crie um programa que permita adicionar nome e
+ idade de cada aluno em arrays separados. No final, exiba a lista de alunos com suas respectivas
+ idades. -->
+
+    <!-- <p>Insira o nome e a idade de cada aluno:</p>
+    <input type="text" id="nameInput" placeholder="Nome">
+    <input type="number" id="ageInput" placeholder="Idade">
+    <button id="addStudentButton">Adicionar Aluno</button>
+    <h2>Lista de Alunos:</h2>
+    <ul id="studentList"></ul>
+
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const ageInput = document.getElementById('ageInput');
+        const addStudentButton = document.getElementById('addStudentButton');
+        const studentList = document.getElementById('studentList');
+        const studentNames = [];
+        const studentAges = [];
+
+        addStudentButton.addEventListener('click', () => {
+            const name = nameInput.value.trim();
+            const age = parseInt(ageInput.value);
+            if (name !== '' && !isNaN(age) && age > 0) {
+                studentNames.push(name);
+                studentAges.push(age);
+                nameInput.value = '';
+                ageInput.value = '';
+                updateStudentList();
+            }
+        });
+
+        function updateStudentList() {
+            studentList.innerHTML = '';
+            for (let i = 0; i < studentNames.length; i++) {
+                const studentItem = document.createElement('li');
+                studentItem.textContent = `${studentNames[i]} - ${studentAges[i]} anos`;
+                studentList.appendChild(studentItem);
+            }
+        }
+    </script> -->
+
+
+
+
+
+
+
+
+
+    <!-- //  EXERCÍCIO 10: Playlist de Músicas
+
+    //  Paulo está organizando sua playlist de músicas para uma festa. Crie um programa que permita
+    // que ele adicione músicas à sua playlist usando um array. No final, exiba a lista completa de
+    // músicas -->
+
+
+
+    <!-- <h1>Playlist das Músicas</h1>
+    // <br>
+
+    // <label for="item">Nova Música:</label>
+    // <input type="text" id="item">
+    // <button onclick="adicionarItem()">Adicionar</button>
+
+
+
+    // <button onclick="mostrarPlaylist()">Mostrar Playlist</button>
+
+    // <div id="output"></div>
+
+
+    // <script>
+    //     let listadafazeres = [];
+    //     let outputDiv = document.getElementById("output");
+
+    //     function adicionarItem() {
+    //         let novoItem = document.getElementById("item").value;
+    //         listadafazeres.push(novoItem);
+    //         outputDiv.innerHTML = "Música adicionada à Lista: " + novoItem;
+    //     }
+
+    //     function removerItem() {
+    //         let itemRemover = document.getElementById("itemRemover").value;
+    //         let index = listadafazeres.indexOf(itemRemover);
+
+    //         if (index !== -1) {
+    //             listadafazeres.splice(index, 1);
+    //             outputDiv.innerHTML= "Item removido da Lista: " + itemRemover;
+    //         } else {
+    //             outputDiv.innerHTML = "Item não encontrado na lista.";
+    //         }
+    //     }
+
+    //     function mostrarPlaylist() {
+    //         if (listadafazeres.length === 0) {
+    //             outputDiv.innerHTML = "A lista está vazia.";
+    //         } else {
+    //             let listaItens = "Itens da Lista:<br>";
+    //             for (let i = 0; i < listadafazeres.length; i++) {
+    //                 listaItens += (i + 1) + ". " + listadafazeres[i] + "<br>";
+    //             }
+    //             outputDiv.innerHTML = listaItens;
+    //         }
+    //     }
+    // </script>
+
+
+
+// <style>
+        // input {
+        // border-radius: 100px;
+        // margin: 400px 0px 0px 750px;
+
+        // }
+
+        // button {
+        // border-radius: 100px;
+        // font-size: larger;
+
+        // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        // }
+
+        // #item {
+        // font-size: larger;
+        // }
+
+        // label {
+        // position: absolute;
+        // margin: 405px 0px 0px 650px;
+
+        // }
+
+        // h1 {
+        // position: absolute;
+        // margin: 345px 0px 0px 790px;
+        // font-size: 300%;
+        // color: rgb(0, 0, 0);
+        // }
+
+        // body {
+        // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        // }
+
+
+        //
+        </style > -->
+
+</body>
+
+</html>
